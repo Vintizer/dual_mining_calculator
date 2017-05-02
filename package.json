@@ -1,0 +1,17 @@
+{
+  "name": "dual_mining_calculator",
+  "version": "0.1.0",
+  "description": "Test you dual mining Claymore maximum dcri profit",
+  "main": "server.js",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "vintizer",
+  "license": "ISC"
+}
