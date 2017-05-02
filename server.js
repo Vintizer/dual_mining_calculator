@@ -28,8 +28,8 @@ var mainFunction = (dcri) => {
 
 	}, localeConst.TIMEOUT);
 };
-mainFunction(localeConst.DCRI_START);
-
+// mainFunction(localeConst.DCRI_START);
+console.log(process.title);
 
 
 //  https://github.com/badmofo/ethereum-mining-calculator/blob/master/compute.py
