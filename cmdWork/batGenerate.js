@@ -2,6 +2,7 @@ var fs = require('fs');
 
 
 module.exports = (dcri, cb) => {
+	console.log("batGenerate");
 	var fname = "startDualMiningTest.bat";
 	var innerText = "PING 1.1.1.1 -n 1 -w 3000 >NUL \r\n" +
 		"EthDcrMiner64.exe" +

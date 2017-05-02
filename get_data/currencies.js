@@ -1,6 +1,7 @@
 var request = require('request');
 
 module.exports = (cur, cb) => {
+	console.log("currencies");
 	switch (cur) {
 		case "eth":
 			request('https://api.coinmarketcap.com/v1/ticker/ethereum/', function (error, response, body) {

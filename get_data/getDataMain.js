@@ -4,6 +4,7 @@ var calcData = require("./calcData");
 
 
 module.exports = (cb) => {
+	console.log("getDatamine");
 	dataMiner(function(data){
 		var averageEth = findAverage(data.eth);
 		var averageDcr = findAverage(data.dcr);

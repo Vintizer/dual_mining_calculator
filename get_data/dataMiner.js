@@ -2,6 +2,7 @@ var request = require('request');
 const cheerio = require("cheerio");
 
 module.exports = (cb) => {
+	console.log("dataminer");
 	var minerData = {
 		eth: [],
 		dcr: []

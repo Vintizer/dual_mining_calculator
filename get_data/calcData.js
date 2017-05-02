@@ -2,6 +2,7 @@ var currencies = require("./currencies");
 var calculator = require("./calculator");
 
 module.exports = (ethHashrate, dcrHashrate, cb) => {
+	console.log("calcData");
 	currencies("eth", function(priceEth) {
 		calculator("eth", function(rew) {
 			var ethMining = rew * ethHashrate / 1000;

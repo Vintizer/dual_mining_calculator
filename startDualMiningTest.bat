@@ -1,2 +1,0 @@
-PING 1.1.1.1 -n 1 -w 1000 >NUL
-EthDcrMiner64.exe -epool eu2.ethermine.org:4444 -ewal 0xc907ad492c73af59305a6bac703f87dd5e35c092.sapph -epsw x -dpool dcr.coinmine.pl:2222 -dwal vintizer.vinti -dpsw 774 -allpools 1 -gser 1 -dcri undefined

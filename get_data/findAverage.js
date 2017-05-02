@@ -1,4 +1,5 @@
 module.exports = (arr) => {
+	console.log("findAverage");
 	var deleteExtremums = (arr) => {
 		var arrWork = arr.slice();
 		var deleteMax = (arr) => {

@@ -2,6 +2,7 @@ var request = require('request');
 const localeConst = require('../const.json');
 
 module.exports = (cur, cb) => {
+	console.log("calculator");
 	switch (cur) {
 		case "eth":
 			request('https://whattomine.com/coins.json', function(error, response, body) {
