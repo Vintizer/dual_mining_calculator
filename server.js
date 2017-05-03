@@ -5,14 +5,19 @@ var getData = require("./get_data/getDataMain");
 var generateReport = require("./report/generateReport");
 const localeConst = require('./const.json');
 
-var childPid;
+var childPid,
+	childSpawn = ()=> {
+	};
 
 var commonData = {};
 var mainFunction = (dcri) => {
-	stopProcess(childPid, function() {
+	stopProcess(childPid, childSpawn, function() {
 		batGenerate(dcri, function() {
-			batStart(function(pid) {
+			batStart(function(pid, spawn) {
 				childPid = pid;
+				childSpawn = spawn;
+
+				console.log("childPid", childPid);
 				setTimeout(function() {
 					getData(function(data) {
 						commonData[dcri] = data;
@@ -23,14 +28,13 @@ var mainFunction = (dcri) => {
 							generateReport(commonData);
 						}
 					});
-				}, localeConst.TIMEOUT);
+				}, localeConst.TIMEOUT * 1000);
 			});
 
 		});
 	});
-
-
 };
+
 mainFunction(localeConst.DCRI_START);
 
 //  https://github.com/badmofo/ethereum-mining-calculator/blob/master/compute.py
